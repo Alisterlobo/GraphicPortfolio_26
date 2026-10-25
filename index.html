@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alister Lobo — Graphic Designer</title>
+<meta name="description" content="Graphic design portfolio: social media posts, ad posters, branding, book covers and event banners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- =====================================================================
+     EDIT YOUR DETAILS in script.js (top of the file)
+     ===================================================================== -->
+<!-- Your details (name, images, links) are at the top of script.js -->
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cur-dot" id="dot"></div><div class="cur-ring" id="ring"></div><div class="cur-xy" id="xy">0,0</div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" id="logo"></a>
+    <button class="burger" id="burger" aria-label="Menu">MENU</button>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="btn" id="resumeNav">Resume ↓</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ PAGE 1: HERO BANNER ============ -->
+<header class="cover" id="top">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="cv-stage">
+    <h1 class="cv-name back" data-depth="-14"><span id="cvA"></span></h1>
+
+    <div class="cv-wrap" data-depth="10">
+      <div class="cv-frame">
+        <!-- <img src="images/hero.webp" id="heroImg" alt="Hero image"> -->
+
+        <img id="heroImg" alt="Hero image">
+        <!-- <div class="art" id="art"><b>YOUR HERO IMAGE</b></div> -->
+        <div class="art" id="art"><b></b></div>
+
+      </div>
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+        <circle cx="100" cy="100" r="98" fill="#f3efe6"/>
+        <text font-family="Space Grotesk,sans-serif" font-weight="700" font-size="17" letter-spacing="2.2" fill="#0d0d12" text-transform="uppercase"><textPath href="#circ" id="badgeTxt"></textPath></text>
+        <path d="M100 78C101.5 92 108 98.5 122 100C108 101.5 101.5 108 100 122C98.5 108 92 101.5 78 100C92 98.5 98.5 92 100 78Z" fill="#ff5a0a"/>
+      </svg>
+      <span class="stk s1" id="stk1"></span>
+      <span class="stk s2" id="stk2"></span>
+      <span class="stk s3" id="stk3"></span>
+    </div>
+
+    <h2 class="cv-name front" data-depth="16"><span id="cvB"></span></h2>
+
+    <div class="cv-side" id="cvSide"></div>
+    <div class="cv-note" id="cvNote"></div>
+  </div>
+  <div class="cv-cta">
+    <a href="#work" class="btn">See my work →</a>
+    <a href="#contact" class="btn ghost">Let's talk</a>
+  </div>
+</header>
+
+<div class="marquee"><div id="marq"></div></div>
+
+<!-- ============ PAGE 2: ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="board-tag mono rv"> About</div>
+    <h2 class="title rv">What I <em>do</em>, and what I <em>use.</em></h2>
+    <div class="about-grid">
+      <div class="rv">
+        <p class="lead" id="aboutText"></p>
+        <div class="chips" id="chips"></div>
+        <div class="stats" id="stats"></div>
+      </div>
+      
+      <!-- <div class="panel rv">
+        <h3><span>Toolbar</span><span>Skill level</span></h3>
+        <div id="tools"></div>
+      </div> -->
+
+      <div class="panel rv">
+        <h3><span>Toolbar & Software</span></h3>
+      <div id="tools"></div>
+    </div>
+    
+    </div>
+
+    <div class="board-tag mono rv" style="margin-top:5rem">Layers — Experience</div>
+    <div class="layers rv" id="layers"></div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="board-tag mono rv">Artboard 03 — Work</div>
+    <h2 class="title rv">Selected <em>work.</em></h2>
+    <div class="filters rv" id="filters"></div>
+    <div id="works"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="board-tag mono rv">Artboard 04 — Contact</div>
+    <h2 class="title rv">Have an idea? <em>Let's make it.</em></h2>
+    <div class="contact-grid">
+      <div class="rv">
+        <a class="big-mail" id="mail"></a>
+        <p style="margin-top:1rem;opacity:.7" id="phone"></p>
+        <form id="form">
+          <input id="fName" placeholder="Your name" required>
+          <input id="fMail" type="email" placeholder="Your email" required>
+          <textarea id="fMsg" rows="4" placeholder="Tell me about your project" required></textarea>
+          <button class="btn" type="submit" style="justify-self:start">Send message →</button>
+        </form>
+      </div>
+      <div class="rv">
+        <div class="socials" id="socials"></div>
+        <a class="btn" id="resumeBtn" style="margin-top:1.2rem;display:flex;justify-content:center" download>Download my resume ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAST PAGE: THANK YOU ============ -->
+<section class="thanks" id="thanks">
+  <div class="wrap">
+    <div class="board-tag mono">Export</div>
+    <h2 id="thx"></h2>
+    <div class="export">
+      <div class="bar"><i id="expBar"></i></div>
+      <p id="expTxt">Exporting… 0%</p>
+    </div>
+  </div>
+</section>
+<footer>© <span id="yr"></span> <span id="fName2"></span> · Made with love and too much coffee</footer>
+
+<div class="lb" id="lb"><button class="x" id="lbx" aria-label="Close">×</button><img id="lbimg" alt=""></div>
+
+<script src="script.js"></script>
+</body>
+</html>
